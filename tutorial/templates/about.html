@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Empowerment App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Financial Empowerment App</h1>
+        
+        <h2>SIP Calculator</h2>
+        <form action="{{ url_for('calculate_sip') }}" method="POST">
+            <label for="principal">Principal Amount (₹):</label>
+            <input type="number" name="principal" required>
+            
+            <label for="rate">Interest Rate (%):</label>
+            <input type="number" name="rate" required>
+            
+            <label for="time">Time (Years):</label>
+            <input type="number" name="time" required>
+            
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if future_value %}
+        <h3>Future Value of SIP: ₹{{ future_value }}</h3>
+        {% endif %}
+        {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+        {% endif %}
+        
+        <h2>Expense Tracking (Mock-up)</h2>
+        <form action="#" method="POST">
+            <label for="expense_name">Expense Name:</label>
+            <input type="text" name="expense_name" required>
+            
+            <label for="expense_amount">Amount (₹):</label>
+            <input type="number" name="expense_amount" required>
+            
+            <button type="submit">Add Expense</button>
+        </form>
+        <p>Expenses will be displayed here after you implement the backend tracking functionality.</p>
+
+        <h2>Educational Resources</h2>
+        <p>Check out the learning modules to understand finance better!</p>
+
+        <!-- Link to Dashboard or Logout -->
+        <p><a href="{{ url_for('dashboard') }}">Dashboard</a> | <a href="{{ url_for('logout') }}">Logout</a></p>
+
+    </div>
+</body>
+</html>
