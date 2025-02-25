@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting Tool</title>
+    <link rel="stylesheet" href="Budgeting tool.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Budgeting Tool</h1>
+            <p>Manage your income, expenses, and savings effectively.</p>
+        </header>
+
+        <section class="budget-form">
+            <h2>Track Your Budget</h2>
+            <form id="budgetForm">
+                <div class="input-group">
+                    <label for="income">Income (₹):</label>
+                    <input type="number" id="income" placeholder="Enter your income" required>
+                </div>
+                <div class="input-group">
+                    <label for="expenses">Expenses (₹):</label>
+                    <input type="number" id="expenses" placeholder="Enter your expenses" required>
+                </div>
+                <div class="input-group">
+                    <label for="savings">Savings Goal (₹):</label>
+                    <input type="number" id="savings" placeholder="Enter your savings goal" required>
+                </div>
+                <button type="submit" id="calculateBtn">Calculate</button>
+            </form>
+        </section>
+
+        <section class="results">
+            <h2>Summary</h2>
+            <div id="resultDisplay">
+                <!-- Dynamic content will appear here -->
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="BudgetingT.js"></script>
+</body>
+</html>

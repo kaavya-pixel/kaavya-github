@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="IPT.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Investment Portfolio Tracker</h1>
+        
+        <section class="input-section">
+            <div class="form-group">
+                <label for="income">Monthly Income (₹):</label>
+                <input type="number" id="income" placeholder="Enter income">
+            </div>
+            
+            <div class="form-group">
+                <label for="expenses">Monthly Expenses (₹):</label>
+                <input type="number" id="expenses" placeholder="Enter expenses">
+            </div>
+
+            <div class="form-group">
+                <label for="investments">Investments (₹):</label>
+                <input type="number" id="investments" placeholder="Enter investment value">
+            </div>
+
+            <button id="trackButton">Track Finance</button>
+        </section>
+
+        <section id="output-section" class="output-section">
+            <h2>Financial Summary</h2>
+            <p id="netIncomeResult">Net Income: ₹0</p>
+            <p id="totalInvestmentsResult">Total Investments: ₹0</p>
+            <p id="netSavingsResult">Net Savings: ₹0</p>
+        </section>
+
+        <section id="expenseListSection" class="expense-list-section">
+            <h2>Expense Breakdown</h2>
+            <table id="expenseList">
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Amount (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses will appear here -->
+                </tbody>
+            </table>
+            <div>
+                <label for="expenseName">Expense Name:</label>
+                <input type="text" id="expenseName" placeholder="Enter expense name">
+                <label for="expenseAmount">Expense Amount (₹):</label>
+                <input type="number" id="expenseAmount" placeholder="Enter amount">
+                <button id="addExpenseButton">Add Expense</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="IPT.js"></script>
+</body>
+</html>
